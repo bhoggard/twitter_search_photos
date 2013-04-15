@@ -19,7 +19,7 @@ Or install it yourself as:
     require 'twitter_hash_photos'
 
     # look for photos with #art in tweet
-    response = TwitterHashPhotos('art')
+    response = TwitterHashPhotos.search('art')
 
     # get ID we can use when we request again only get new ones
     refresh_id = response.refresh_id
