@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = TwitterHashPhotos::VERSION
   spec.authors       = ["Barry Hoggard"]
   spec.email         = ["barry@tristanmedia.com"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.description   = %q{Ruby gem to find photos on Twitter by hashtag}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
   spec.license       = "MIT"
