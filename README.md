@@ -18,11 +18,18 @@ Or install it yourself as:
 
     require 'twitter_search_photos'
 
+    Set up the following keys for ENV:
+
+    TWITTER_CONSUMER_KEY
+    TWITTER_CONSUMER_SECRET
+    TWITTER_OAUTH_TOKEN
+    TWITTER_OAUTH_TOKEN_SECRET
+
     # look for photos with #art in tweet
-    response = TwitterSearchPhotos.search('art')
+    response = TwitterSearchPhotos.search('#art')
 
     # get ID we can use when we request again only get new ones
-    refresh_id = response.refresh_id
+    max_id = response.max_id
 
     # get list of results
     results = response.results
@@ -31,12 +38,12 @@ Or install it yourself as:
     first = results.first
 
     # individual elements of the result
-    first.image_url
-    first.original_link
-    first.username
+    first.media_url
+    first.display_url
+    first.screen_name
 
     # do another call, passing in the since ID:
-    response = TwitterSearchPhotos('art', since_id: refresh_id)
+    response = TwitterSearchPhotos('#art', since_id: max_id)
 
 
 ## Contributing
@@ -46,3 +53,8 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Thanks
+
+Some of the code is based on https://github.com/scottwb/twitter-image-search.
+
