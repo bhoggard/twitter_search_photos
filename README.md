@@ -1,10 +1,10 @@
-# TwitterHashPhotos
+# TwitterSearchPhotos
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'twitter_hash_photos'
+    gem 'twitter_search_photos'
 
 And then execute:
 
@@ -12,14 +12,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install twitter_hash_photos
+    $ gem install twitter_search_photos
 
 ## Usage
 
-    require 'twitter_hash_photos'
+    require 'twitter_search_photos'
 
     # look for photos with #art in tweet
-    response = TwitterHashPhotos.search('art')
+    response = TwitterSearchPhotos.search('art')
 
     # get ID we can use when we request again only get new ones
     refresh_id = response.refresh_id
@@ -36,7 +36,7 @@ Or install it yourself as:
     first.username
 
     # do another call, passing in the since ID:
-    response = TwitterHashPhotos('art', since_id: refresh_id)
+    response = TwitterSearchPhotos('art', since_id: refresh_id)
 
 
 ## Contributing

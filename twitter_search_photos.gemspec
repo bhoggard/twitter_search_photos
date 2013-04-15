@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'twitter_hash_photos/version'
+require 'twitter_search_photos/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "twitter_hash_photos"
-  spec.version       = TwitterHashPhotos::VERSION
+  spec.name          = "twitter_search_photos"
+  spec.version       = TwitterSearchPhotos::VERSION
   spec.authors       = ["Barry Hoggard"]
   spec.email         = ["barry@tristanmedia.com"]
   spec.description   = %q{Ruby gem to find photos on Twitter by hashtag}

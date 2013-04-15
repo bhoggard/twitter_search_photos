@@ -1,8 +1,8 @@
-require "twitter_hash_photos/version"
+require "twitter_search_photos/version"
 require "ostruct"
 require "net/http"
 
-module TwitterHashPhotos
+module TwitterSearchPhotos
   
   def self.search hashtag, *options
     response = OpenStruct.new(refresh_id: "323619240169074688")
