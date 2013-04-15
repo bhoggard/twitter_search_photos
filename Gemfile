@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in twitter_hash_photos.gemspec
 gemspec
+
+gem 'httparty', '~> 0.11.0' 

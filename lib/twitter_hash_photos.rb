@@ -1,5 +1,6 @@
 require "twitter_hash_photos/version"
-require 'ostruct'
+require "ostruct"
+require "net/http"
 
 module TwitterHashPhotos
   
