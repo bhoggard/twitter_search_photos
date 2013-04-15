@@ -16,27 +16,27 @@ Or install it yourself as:
 
 ## Usage
 
-  require 'twitter_hash_photos'
+    require 'twitter_hash_photos'
 
-  # look for photos with #art in tweet
-  response = TwitterHashPhotos('art')
+    # look for photos with #art in tweet
+    response = TwitterHashPhotos('art')
 
-  # get ID we can use when we request again only get new ones
-  refresh_id = response.refresh_id
+    # get ID we can use when we request again only get new ones
+    refresh_id = response.refresh_id
 
-  # get list of results
-  results = response.results
+    # get list of results
+    results = response.results
 
-  # get first result
-  first = results.first
+    # get first result
+    first = results.first
 
-  # individual elements of the result
-  first.image_url
-  first.original_link
-  first.username
+    # individual elements of the result
+    first.image_url
+    first.original_link
+    first.username
 
-  # do another call, passing in the since ID:
-  response = TwitterHashPhotos('art', since_id: refresh_id)
+    # do another call, passing in the since ID:
+    response = TwitterHashPhotos('art', since_id: refresh_id)
 
 
 ## Contributing
