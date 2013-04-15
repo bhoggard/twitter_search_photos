@@ -28,7 +28,7 @@ Or install it yourself as:
     # look for photos with #art in tweet
     response = TwitterSearchPhotos.search('#art')
 
-    # get ID we can use when we request again only get new ones
+    # get ID we can use when we search again to only get new ones
     max_id = response.max_id
 
     # get list of results

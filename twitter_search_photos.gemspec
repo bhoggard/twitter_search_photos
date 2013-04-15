@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TwitterSearchPhotos::VERSION
   spec.authors       = ["Barry Hoggard"]
   spec.email         = ["barry@tristanmedia.com"]
-  spec.description   = %q{Ruby gem to find photos on Twitter by hashtag}
-  spec.summary       = %q{Find photos on Twitter by hashtag}
+  spec.description   = %q{Ruby gem to find photos on Twitter with a search query}
+  spec.summary       = %q{Find photos on Twitter by search query}
   spec.homepage      = ""
   spec.license       = "MIT"
 
