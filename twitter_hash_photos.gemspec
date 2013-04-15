@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Barry Hoggard"]
   spec.email         = ["barry@tristanmedia.com"]
   spec.description   = %q{Ruby gem to find photos on Twitter by hashtag}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = %q{Find photos on Twitter by hashtag}
   spec.homepage      = ""
   spec.license       = "MIT"
 
