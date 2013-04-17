@@ -41,6 +41,7 @@ Or install it yourself as:
     first.media_url
     first.display_url
     first.screen_name
+    first.created_at
 
     # do another call, passing in the since ID:
     response = TwitterSearchPhotos('#art', since_id: max_id)

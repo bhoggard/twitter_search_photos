@@ -27,6 +27,14 @@ describe TwitterSearchPhotos do
     @photo.display_url.must_match /^http/
   end
 
+  it 'returns a screen_name' do
+    @photo.screen_name.wont_be_nil
+  end
+
+  it 'returns created_at' do
+    @photo.created_at.must_be_kind_of DateTime
+  end
+
   it 'returns a responce when called with since_id' do
     @max_id = @response.max_id
     @since_response = TwitterSearchPhotos.search('#art', since_id: @max_id)

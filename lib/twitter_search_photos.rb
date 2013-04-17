@@ -24,9 +24,11 @@ module TwitterSearchPhotos
       tweet.media.each do |media|
         if media.is_a?(Twitter::Media::Photo)
           result = OpenStruct.new(
-            media_url: media.media_url, 
+            media_url:   media.media_url, 
             display_url: "https://#{media.display_url}",
-            screen_name: tweet.user.screen_name
+            screen_name: tweet.user.screen_name,
+            # Twitter returns a Time object, I want a DateTime
+            created_at:  DateTime.parse(tweet.created_at.to_s)
           )
           results << result
         end
