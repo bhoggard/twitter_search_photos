@@ -4,15 +4,11 @@ require "twitter"
 
 module TwitterSearchPhotos
 
-  Twitter.configure do |config|
-    config.consumer_key       = ENV["TWITTER_CONSUMER_KEY"]
-    config.consumer_secret    = ENV["TWITTER_CONSUMER_SECRET"]
-    config.oauth_token        = ENV["TWITTER_OAUTH_TOKEN"]
-    config.oauth_token_secret = ENV["TWITTER_OAUTH_TOKEN_SECRET"]
-  end
+  @@configured = false
 
   # Can be optionally called with since_id: max_id
   def self.search(query, options = {})
+    configure!
     options.merge!(include_entities: 1, result_type: 'recent')
     search = Twitter.search(query, options)
     results = make_results(search.results)
@@ -40,5 +36,17 @@ module TwitterSearchPhotos
     results
 
   end
+
+  private
+
+    def self.configure!
+      return if @@configured
+      Twitter.configure do |config|
+        config.consumer_key       = ENV["TWITTER_CONSUMER_KEY"]
+        config.consumer_secret    = ENV["TWITTER_CONSUMER_SECRET"]
+        config.oauth_token        = ENV["TWITTER_OAUTH_TOKEN"]
+        config.oauth_token_secret = ENV["TWITTER_OAUTH_TOKEN_SECRET"]
+      end
+    end
   
 end
