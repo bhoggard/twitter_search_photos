@@ -47,6 +47,7 @@ module TwitterSearchPhotos
         config.oauth_token        = ENV["TWITTER_OAUTH_TOKEN"]
         config.oauth_token_secret = ENV["TWITTER_OAUTH_TOKEN_SECRET"]
       end
+      @@configured = true
     end
   
 end
