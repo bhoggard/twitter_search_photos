@@ -9,7 +9,7 @@ module TwitterSearchPhotos
   # Can be optionally called with since_id: max_id
   def self.search(query, options = {})
     configure!
-    options.merge!(include_entities: 1, result_type: 'recent')
+    options.merge!(include_entities: 1)
     search = Twitter.search(query, options)
     results = make_results(search.results)
     response = OpenStruct.new(max_id: search.max_id, results: results)
